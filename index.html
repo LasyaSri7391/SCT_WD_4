@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container" id="todo-app">
+    <header class="app-header" id="app-header">
+      <h1 id="app-title">To-Do List</h1>
+      <p id="app-subtitle">Manage your daily tasks efficiently</p>
+    </header>
+
+    <main class="app-main" id="app-main">
+      <!-- Task Input Card -->
+      <section class="card form-card" id="form-section">
+        <form id="todo-form">
+          <div class="form-group" id="group-title">
+            <label for="task-input" id="label-title">Task Title</label>
+            <input type="text" id="task-input" placeholder="What needs to be done?" required autocomplete="off">
+          </div>
+          <div class="form-group" id="group-due">
+            <label for="task-due" id="label-due">Due Date & Time</label>
+            <input type="datetime-local" id="task-due" required>
+          </div>
+          <button type="submit" id="add-btn" class="btn btn-primary">Add Task</button>
+        </form>
+      </section>
+
+      <!-- Tasks List Section -->
+      <section class="tasks-section" id="tasks-section">
+        <div class="tasks-header" id="tasks-header">
+          <h2 id="tasks-title-text">Today's Schedule</h2>
+          <div class="date-display" id="date-display">
+            <div class="section-label" id="current-date-label">October 24</div>
+            <div id="current-time-val" style="font-weight:700;font-size:14px">Thursday, 10:45 AM</div>
+          </div>
+        </div>
+        <div id="tasks-list" class="tasks-list">
+          <!-- Tasks will be dynamically injected here -->
+        </div>
+        <div id="empty-state" class="empty-state">
+          <p id="empty-msg">No tasks yet. Add a task above to get started!</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+/* Theme variables matching the Bold Typography design system */
+:root {
+  --bg-color: #ffffff;
+  --bg-main: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #94a3b8;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --danger: #ef4444;
+  --shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1e293b;
+  background-color: var(--bg-color);
+  line-height: 1.5;
+  padding: 2.5rem 1rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  margin-bottom: 2.5rem;
+}
+
+.app-header h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.app-header p {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+/* Forms & Inputs */
+.card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label, .edit-input-group label {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.form-group input, .edit-input-group input {
+  padding: 12px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  background-color: var(--border-light);
+  font-size: 14px;
+  color: var(--text-main);
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.form-group input:focus, .edit-input-group input:focus {
+  border-color: var(--primary);
+  background-color: #ffffff;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #eff6ff;
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: #dbeafe;
+}
+
+.btn-danger {
+  background-color: #fef2f2;
+  color: var(--danger);
+}
+
+.btn-danger:hover {
+  background-color: #fee2e2;
+}
+
+/* Tasks Schedule Header */
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.tasks-header h2 {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.date-display {
+  text-align: right;
+}
+
+.date-display .section-label {
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+/* Task Cards */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.task-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.task-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.task-details {
+  flex: 1;
+}
+
+.task-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.task-due {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+.task-due.overdue {
+  color: var(--danger);
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.task-actions .btn {
+  width: auto;
+  padding: 8px 12px;
+  font-size: 10px;
+  border-radius: 8px;
+}
+
+/* Completed & Edit Form */
+.task-card.completed {
+  background-color: var(--bg-color);
+  border-color: var(--border-light);
+  box-shadow: none;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.edit-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 24px;
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  background-color: var(--bg-color);
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Responsive Desktop Grid Layout */
+@media (min-width: 850px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-main);
+    padding: 0;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .app-header {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: var(--bg-color);
+    border-right: 1px solid var(--border);
+    padding: 40px 40px 20px 40px;
+    margin-bottom: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .app-header h1 {
+    font-size: 56px;
+  }
+
+  .app-main {
+    display: contents; /* Grid flattening trick */
+  }
+
+  .form-card {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--bg-color);
+    border: none;
+    border-right: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px 40px 40px 40px;
+    margin-bottom: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .tasks-section {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    background-color: var(--bg-main);
+    padding: 60px;
+    overflow-y: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tasks-list, .empty-state {
+    max-width: 600px;
+    width: 100%;
+  }
+}
